@@ -5,13 +5,12 @@ dotenv.config()
 
 import './db/index.js'
 
+import cors from 'cors'
+
 const app = express()
 
+app.use(cors())
 app.use(express.json())
-
-app.get('/', (req, res) => {
-  res.send('It works')
-})
 
 import Medium from './models/Medium.model.js'
 import Question from './models/Question.model.js'
