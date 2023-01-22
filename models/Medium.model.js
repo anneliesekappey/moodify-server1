@@ -12,7 +12,7 @@ const mediumSchema = new Schema(
       required: [true, 'Description is required'],
     },
     type: {
-      enum: ['song', 'movie'],
+      type: String,
     },
     mood: [
       {
@@ -37,9 +37,12 @@ const mediumSchema = new Schema(
     creator: {
       type: String,
     },
-    // image: {
-    //   type: Image,
-    // },
+    image: {
+      type: String,
+    },
+    link: {
+      type: String,
+    },
   },
   { timestamps: true }
 )
